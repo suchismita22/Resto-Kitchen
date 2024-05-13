@@ -1,0 +1,25 @@
+<div class="container mt-5 mb-5">
+    <div class="d-flex">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="search item" name="search">
+    </div>
+     <span class="fa fa-search search-icon"></span>
+     <button class="btn btn-primary">
+      <i style="font-size: 23px;" class="fa fa-cart-plus"></i>
+      <div style="font-size: 10px;" class="badge bg-danger">5</div>
+     </button>
+    </div>
+    <div class="row">
+
+        <div class="col-lg-4" *ngFor="let fd of foodData">
+        
+              <div class="foodbox mt-3 mb-3">
+                <img src="{{fd.foodImg}}" alt=""/>
+                <h1>{{fd.foodDetails}}</h1>
+                 <p>{{fd.foodPrice | currency:'INR'}}</p>
+                 <br/>
+                 <a class="buybtn" routerLink="['menu',fd.id]">Buy Now &nbsp;<i class="bi bi-bag"></i></a>
+                </div>
+        </div>
+    </div>
+</div>
